@@ -2,16 +2,16 @@ $(function() {
   console.log("ui is ready!");
 
   var code_data = {
-    "language": "python",
+    "language": "go",
     "files": [
-      { "name": "main.py", "content": "print(42)" }
+      { "name": "main.py", "content": "package main\r\n import \"fmt\" \r\n func main() {fmt.Println(1234)}" }
     ]
   };
 
   var editor = CodeMirror.fromTextArea(document.getElementById("code-input"), {
     lineNumbers: true,
     indentUnit: 4,
-    mode: "python",
+    mode: "go",
     theme: "icecoder"
   });
 
